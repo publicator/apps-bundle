@@ -22,7 +22,7 @@ use Timiki\Bundle\RpcServerBundle\Registry\HttpHandlerRegistry;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class AppsBundleExtension extends Extension
+class AppsExtension extends Extension
 {
     private $loadedMethodPath = [];
 
