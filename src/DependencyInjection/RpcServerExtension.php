@@ -1,6 +1,6 @@
 <?php
 
-namespace Publicato\Bundle\AppsBundle\DependencyInjection;
+namespace Publicator\Bundle\AppsBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\Config\Resource\GlobResource;

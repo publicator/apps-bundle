@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Publicato\\Bundle\\AppsBundle\\": "src"
+            "Publicator\\Bundle\\AppsBundle\\": "src"
         }
     },
     "config": {

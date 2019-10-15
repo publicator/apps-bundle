@@ -1,6 +1,6 @@
 <?php
 
-namespace Publicato\Bundle\Serializer;
+namespace Publicator\Bundle\AppsBundle\Serializer;
 
 use JMS\Serializer\SerializationContext;
 use Timiki\Bundle\RpcServerBundle\Serializer\SerializerInterface;
