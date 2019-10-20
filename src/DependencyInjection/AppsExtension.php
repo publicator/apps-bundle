@@ -28,5 +28,6 @@ class AppsExtension extends Extension
 
         $container->setParameter('publicator.api_key', $config['api_key']);
         $container->setParameter('publicator.secret_key', $config['secret_key']);
+        $container->setParameter('publicator.api_rpc_url', $config['api_rpc_url']);
     }
 }

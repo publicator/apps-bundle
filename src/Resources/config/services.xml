@@ -2,6 +2,12 @@
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <service id="publicator.rpc.serializer" class="Publicator\Bundle\AppsBundle\Serializer\RpcSerializer" public="true">
+            <argument type="service" id="jms_serializer.serializer"/>
         </service>
+        <service id="Publicator\Bundle\AppsBundle\Client\Client" class="Publicator\Bundle\AppsBundle\Client\Client" public="false">
+            <argument>%publicator.api_rpc_url%</argument>
+            <argument type="service" id="event_dispatcher"/>
+        </service>
+        <service id="publicator.rpc.client" alias="Publicator\Bundle\AppsBundle\Client\Client" public="true"/>
     </services>
 </container>

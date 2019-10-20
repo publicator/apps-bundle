@@ -30,6 +30,11 @@ class Configuration implements ConfigurationInterface
                     ->info('Publicator secret key')
                     ->cannotBeEmpty()
                 ->end()
+                ->scalarNode('api_rpc_url')
+                    ->info('Publicator apps JSON-RPC server url')
+                    ->defaultValue('https://apps.publicator.me/v1')
+                    ->cannotBeEmpty()
+                ->end()
             ->end();
 
         return $treeBuilder;
