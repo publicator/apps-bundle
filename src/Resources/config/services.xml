@@ -9,5 +9,8 @@
             <argument type="service" id="event_dispatcher"/>
         </service>
         <service id="publicator.rpc.client" alias="Publicator\Bundle\AppsBundle\Client\Client" public="true"/>
+        <service  id="Publicator\Bundle\AppsBundle\EventSubscriber\ValidateHashSubscriber" class="Publicator\Bundle\AppsBundle\EventSubscriber\ValidateHashSubscriber" public="false">
+            <tag name="kernel.event_subscriber"/>
+        </service>
     </services>
 </container>

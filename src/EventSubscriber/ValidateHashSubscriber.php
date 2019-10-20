@@ -1,6 +1,6 @@
 <?php
 
-namespace Timiki\Bundle\RpcServerBundle\EventSubscriber;
+namespace Publicator\Bundle\AppsBundle\EventSubscriber;
 
 use Publicator\Bundle\AppsBundle\Method\AbstractMethod;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
@@ -14,11 +14,6 @@ class ValidateHashSubscriber implements EventSubscriberInterface, ContainerAware
     use ContainerAwareTrait;
 
     /**
-     * @var ValidatorInterface
-     */
-    private $validator;
-
-    /**
      * {@inheritdoc}
      */
     public static function getSubscribedEvents()
@@ -26,16 +21,6 @@ class ValidateHashSubscriber implements EventSubscriberInterface, ContainerAware
         return [
             JsonPreExecuteEvent::class => 'onPreExecute',
         ];
-    }
-
-    /**
-     * ValidatorSubscriber constructor.
-     *
-     * @param null|ValidatorInterface $validator
-     */
-    public function __construct(ValidatorInterface $validator = null)
-    {
-        $this->validator = $validator;
     }
 
     /**
