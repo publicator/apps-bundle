@@ -3,15 +3,24 @@
 namespace Publicator\Bundle\AppsBundle\EventSubscriber;
 
 use Publicator\Bundle\AppsBundle\Method\AbstractMethod;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Timiki\Bundle\RpcServerBundle\Event\JsonPreExecuteEvent;
 
-class ValidateHashSubscriber implements EventSubscriberInterface, ContainerAwareInterface
+class ValidateHashSubscriber implements EventSubscriberInterface
 {
-    use ContainerAwareTrait;
+    /**
+     * @var ContainerInterface
+     */
+    private $container;
+
+    /**
+     * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+     */
+    public function __construct(ContainerInterface $container)
+    {
+        $this->container = $container;
+    }
 
     /**
      * {@inheritdoc}
