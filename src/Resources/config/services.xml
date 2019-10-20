@@ -7,6 +7,7 @@
         <service id="Publicator\Bundle\AppsBundle\Client\Client" class="Publicator\Bundle\AppsBundle\Client\Client" public="false">
             <argument>%publicator.api_rpc_url%</argument>
             <argument type="service" id="event_dispatcher"/>
+            <argument>%publicator.api_key%</argument>
         </service>
         <service id="publicator.rpc.client" alias="Publicator\Bundle\AppsBundle\Client\Client" public="true"/>
         <service  id="Publicator\Bundle\AppsBundle\EventSubscriber\ValidateHashSubscriber" class="Publicator\Bundle\AppsBundle\EventSubscriber\ValidateHashSubscriber" public="false">
