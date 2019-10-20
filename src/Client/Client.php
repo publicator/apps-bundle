@@ -6,5 +6,4 @@ use Timiki\RpcClient\Client as BaseClient;
 
 class Client extends BaseClient
 {
-
 }
