@@ -40,7 +40,7 @@ class Client extends BaseClient
      */
     public function call($method, array $params = [], array $headers = [])
     {
-        parent::call($method, \array_merge($params, ['apiKey' => $this->apiKey]), $headers);
+        return parent::call($method, \array_merge($params, ['apiKey' => $this->apiKey]), $headers);
     }
 
     /**
