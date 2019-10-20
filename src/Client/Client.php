@@ -25,6 +25,8 @@ class Client extends BaseClient
     public function __construct($address, EventDispatcherInterface $eventDispatcher = null, $apiKey = null, $options = [], Cache $cache = null)
     {
         parent::__construct($address, $eventDispatcher, $options, $cache);
+
+        $this->apiKey = $apiKey;
     }
 
     /**
