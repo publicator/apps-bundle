@@ -14,7 +14,7 @@ class ConnectEvent extends AbstractEvent
     /**
      * @param null|int $userId
      */
-    public function __construct(?int $userId)
+    public function __construct($userId)
     {
         $this->userId = $userId;
     }
@@ -22,7 +22,7 @@ class ConnectEvent extends AbstractEvent
     /**
      * @return null|int
      */
-    public function getUserId(): ?int
+    public function getUserId()
     {
         return $this->userId;
     }
